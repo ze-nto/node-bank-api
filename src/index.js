@@ -3,7 +3,11 @@ import { promises as fs } from 'fs';
 import winston from 'winston';
 import cors from 'cors';
 import accountsRouter from './routes/account.routes.js'
+import swaggerUi from 'swagger-ui-express';
+import { swaggerDoc } from '../doc.js';
 
+const { readFile, writeFile } = fs;
+const app = express();
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({level, message, label, timestamp}) => {
     return `${timestamp} [${label}] ${level}: ${message}`;
@@ -21,17 +25,13 @@ global.logger = winston.createLogger({
         timestamp(),
         myFormat
     )
-})
+});
 
-const { readFile, writeFile } = fs;
-const app = express();
-
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(express.json());
 app.use(cors());
-
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 app.use('/accounts', accountsRouter);
-
 
 
 app.listen(3000, async () => {

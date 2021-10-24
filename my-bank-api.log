@@ -90,3 +90,7 @@
 2021-10-24T13:49:24.106Z [my-bank-api] info: GET /accounts
 2021-10-24T13:50:23.115Z [my-bank-api] info: PATCH /accounts/updateBalance - {"id":5,"name":"Jose Neto","balance":1000}
 2021-10-24T13:50:28.530Z [my-bank-api] info: GET /accounts
+2021-10-24T14:40:37.797Z [my-bank-api] info: GET /accounts
+2021-10-24T14:41:10.171Z [my-bank-api] info: POST /accounts - {"id":10,"name":"Alessandras","balance":5000}
+2021-10-24T16:20:36.656Z [my-bank-api] info: GET /accounts
+2021-10-24T16:22:10.885Z [my-bank-api] info: GET /accounts
