@@ -63,3 +63,4 @@
 2021-10-23T21:48:10.512Z [my-bank-api] info: PUT /accounts - {"id":4,"name":"Ze Neto","balance":200}
 2021-10-23T21:55:36.849Z [my-bank-api] info: GET /accounts
 2021-10-23T21:55:46.368Z [my-bank-api] info: GET /accounts
+2021-10-24T12:10:15.073Z [my-bank-api] info: POST /accounts - {"id":6,"name":"João Neto","balance":"1000"}

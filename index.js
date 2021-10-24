@@ -2,7 +2,7 @@ import express from 'express';
 import { promises as fs } from 'fs';
 import winston from 'winston';
 import cors from 'cors';
-import accountsRouter from './routes/accounts.js'
+import accountsRouter from './routes/account.routes.js'
 
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({level, message, label, timestamp}) => {
