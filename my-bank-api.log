@@ -1,0 +1,65 @@
+2021-10-23T21:01:32.719Z [my-bank-api] info: File created
+2021-10-23T21:01:32.730Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:01:43.093Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:02:41.137Z [my-bank-api] error: ENOENT: no such file or directory, open 'C:\Projetos\node\my-bank-api\accounts.json'
+2021-10-23T21:03:26.902Z [my-bank-api] info: File created
+2021-10-23T21:03:26.910Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:03:37.825Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:04:13.898Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:04:29.257Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:04:39.319Z [my-bank-api] error: POST /accounts - ENOENT: no such file or directory, open 'C:\Projetos\node\my-bank-api\accounts.json'
+2021-10-23T21:06:00.987Z [my-bank-api] info: File created
+2021-10-23T21:06:01.001Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:06:11.436Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:06:29.699Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:06:35.294Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:06:39.284Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:06:53.599Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:02.613Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:09.280Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:13.974Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:27.613Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:33.376Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:38.195Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:49.153Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:50.198Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:07:59.170Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:08:11.960Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:08:23.225Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:08:28.486Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:08:39.810Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:08:45.144Z [my-bank-api] info: POST /accounts - {"id":1,"name":"Jose Neto","balance":200}
+2021-10-23T21:09:04.477Z [my-bank-api] info: GET /accounts
+2021-10-23T21:09:13.182Z [my-bank-api] info: GET /accounts/:id - {"id":1,"name":"Jose Neto","balance":200}
+2021-10-23T21:09:57.063Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:14:08.477Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:14:44.877Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:14:58.216Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:14:59.323Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:15:16.449Z [my-bank-api] info: POST /accounts - {"id":2,"name":"Jose Neto","balance":0}
+2021-10-23T21:15:47.170Z [my-bank-api] info: POST /accounts - {"id":3,"name":"Jose Neto","balance":""}
+2021-10-23T21:16:01.142Z [my-bank-api] info: POST /accounts - {"id":4,"name":"Jose Neto","balance":null}
+2021-10-23T21:16:19.342Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:16:21.329Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:16:25.275Z [my-bank-api] error: POST /accounts - Name e Balance são obrigatórios
+2021-10-23T21:16:31.800Z [my-bank-api] info: POST /accounts - {"id":5,"name":"Jose Neto","balance":""}
+2021-10-23T21:17:00.264Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:17:11.488Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:17:25.967Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:19:20.788Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:20:18.551Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:20:43.869Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:20:50.335Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:34:22.857Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:38:23.016Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:38:51.174Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:38:54.096Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:39:43.361Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:39:55.613Z [my-bank-api] info: Server running on http://localhost:3000
+2021-10-23T21:46:33.320Z [my-bank-api] info: PATCH /accounts/updateBalance - {"id":5,"balance":1200}
+2021-10-23T21:46:44.699Z [my-bank-api] error: PATCH /accounts - ID e Balance são obrigatórios
+2021-10-23T21:46:51.977Z [my-bank-api] info: PATCH /accounts/updateBalance - {"id":5,"balance":1200}
+2021-10-23T21:48:06.923Z [my-bank-api] error: PUT /accounts - ID, Name e Balance são obrigatórios
+2021-10-23T21:48:10.512Z [my-bank-api] info: PUT /accounts - {"id":4,"name":"Ze Neto","balance":200}
+2021-10-23T21:55:36.849Z [my-bank-api] info: GET /accounts
+2021-10-23T21:55:46.368Z [my-bank-api] info: GET /accounts
