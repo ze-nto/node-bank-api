@@ -9,8 +9,22 @@ import { buildSchema } from 'graphql';
 import { graphqlHTTP } from 'express-graphql';
 
 const { readFile, writeFile } = fs;
-const app = express();
 const { combine, timestamp, label, printf } = winston.format;
+
+//GraphQL definitions
+const schema = buildSchema(`
+    type Account {
+        id: Int
+        name: String
+        balance: Float
+    }
+    type Query {
+        getAccounts: [Account]
+        getAccount(id: Int): Account
+    }
+`);
+
+const app = express();
 const myFormat = printf(({level, message, label, timestamp}) => {
     return `${timestamp} [${label}] ${level}: ${message}`;
 });
@@ -34,6 +48,12 @@ app.use(express.json());
 app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 app.use('/accounts', accountsRouter);
+
+app.use('/graphql', graphqlHTTP({
+    schema: schema,
+    rootValue: null,
+    graphiql: true 
+}));
 
 app.listen(3000, async () => {
 
