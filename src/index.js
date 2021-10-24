@@ -5,6 +5,8 @@ import cors from 'cors';
 import accountsRouter from './routes/account.routes.js'
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDoc } from '../doc.js';
+import { buildSchema } from 'graphql';
+import { graphqlHTTP } from 'express-graphql';
 
 const { readFile, writeFile } = fs;
 const app = express();
@@ -32,8 +34,6 @@ app.use(express.json());
 app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 app.use('/accounts', accountsRouter);
-
-console.log('Just testing rp')
 
 app.listen(3000, async () => {
 
