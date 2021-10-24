@@ -1,5 +1,5 @@
 {
-  "nextId": 9,
+  "nextId": 10,
   "accounts": [
     {
       "id": 1,
@@ -8,8 +8,8 @@
     },
     {
       "id": 2,
-      "name": "Jose Neto",
-      "balance": 0
+      "name": "Zezinho Neto",
+      "balance": 22000
     },
     {
       "id": 3,
@@ -19,7 +19,7 @@
     {
       "id": 5,
       "name": "Jose Neto",
-      "balance": 12000
+      "balance": 1000
     },
     {
       "id": 6,
@@ -34,6 +34,11 @@
     {
       "id": 8,
       "name": "Marcelo Silva",
+      "balance": "2500"
+    },
+    {
+      "id": 9,
+      "name": "Augusta Miranda",
       "balance": "2500"
     }
   ]

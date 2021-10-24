@@ -1,75 +1,37 @@
-import { promises as fs } from 'fs';
-const { readFile, writeFile } = fs;
+import AccountRepository from '../repositories/account.repository.js';
+
 
 async function createAccount(account){
-    const data = JSON.parse(await readFile(global.fileName));
-        
-    account = { 
-        id: data.nextId++, 
-        name: account.name,
-        balance: account.balance 
-    }
-    data.accounts.push(account);
-
-    await writeFile(global.fileName, JSON.stringify(data, null, 2));
-
-    return account;
+    return await AccountRepository.insertAccount(account)
 }
 
 
 async function getAccounts(){
-    const data = JSON.parse(await readFile(global.fileName));
-    delete data.nextId;
-    return data;
+    return await AccountRepository.getAccounts()
 }
 
 
 async function getAccount(id){
-    const data = JSON.parse( await readFile(global.fileName));
-    const account = data.accounts.find(
-        account => account.id === parseInt(id));
-    return account;
+    return await AccountRepository.getAccountById(id);
 }
 
-async function deleteAccount(id){
-    const data = JSON.parse( await readFile(global.fileName));
-    data.accounts = data.accounts.filter(
-        account => account.id !== parseInt(id));
 
-    await writeFile(global.fileName, JSON.stringify(data, null, 2));
+async function deleteAccount(id){
+    return await AccountRepository.deleteAccount(id);
     
 }
 
 
 async function updateAccount(account){
-    const data = JSON.parse(await readFile(global.fileName));
-    const index = data.accounts.findIndex( item => item.id === account.id);
-
-    if (index === -1){
-        throw new Error('Registro não encontrado');
-    }
-
-    data.accounts[index].name = account.name,
-    data.accounts[index].balance = account.balance
-
-    await writeFile(global.fileName, JSON.stringify(data, null, 2));
-
-    return data.accounts[index];
+    return await AccountRepository.updateAccount(account)
 }
 
+
+
 async function updateBalance(account){
-    const data = JSON.parse(await readFile(global.fileName));
-        const index = data.accounts.findIndex( item => item.id === account.id);
-
-        if (index === -1){
-            throw new Error('Registro não encontrado');
-        }
-
-        data.accounts[index].balance = account.balance;
-
-        await writeFile(global.fileName, JSON.stringify(data, null, 2));
-
-        return data.accounts[index];
+    const acc = await AccountRepository.getAccountById(account.id);
+    acc.balance = account.balance;
+    return await AccountRepository.updateAccount(acc);
 }
 
 
