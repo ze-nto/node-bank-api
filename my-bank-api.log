@@ -64,3 +64,18 @@
 2021-10-23T21:55:36.849Z [my-bank-api] info: GET /accounts
 2021-10-23T21:55:46.368Z [my-bank-api] info: GET /accounts
 2021-10-24T12:10:15.073Z [my-bank-api] info: POST /accounts - {"id":6,"name":"João Neto","balance":"1000"}
+2021-10-24T12:32:30.083Z [my-bank-api] error: POST /accounts - readFile is not defined
+2021-10-24T12:32:55.360Z [my-bank-api] info: POST /accounts - {"id":7,"name":"Marcelo Silva","balance":"2500"}
+2021-10-24T12:48:27.056Z [my-bank-api] info: POST /accounts - {"id":8,"name":"Marcelo Silva","balance":"2500"}
+2021-10-24T12:48:32.063Z [my-bank-api] info: GET /accounts
+2021-10-24T12:48:38.104Z [my-bank-api] error: GET /accounts - Cannot read property 'id' of undefined
+2021-10-24T12:53:11.953Z [my-bank-api] error: GET /accounts - Cannot read property 'id' of undefined
+2021-10-24T12:53:16.120Z [my-bank-api] error: GET /accounts - Cannot read property 'id' of undefined
+2021-10-24T12:53:23.022Z [my-bank-api] info: GET /accounts
+2021-10-24T12:53:54.249Z [my-bank-api] info: GET /accounts/:id
+2021-10-24T12:54:10.422Z [my-bank-api] error: PUT /accounts - Assignment to constant variable.
+2021-10-24T12:54:35.352Z [my-bank-api] info: PUT /accounts - {"id":4,"name":"Zezinho Neto","balance":2000}
+2021-10-24T12:54:45.817Z [my-bank-api] info: DELETE /accounts/:id - 4
+2021-10-24T12:54:55.575Z [my-bank-api] info: GET /accounts
+2021-10-24T12:55:15.567Z [my-bank-api] info: PATCH /accounts/updateBalance - {"id":5,"name":"Jose Neto","balance":12000}
+2021-10-24T12:55:19.951Z [my-bank-api] info: GET /accounts
