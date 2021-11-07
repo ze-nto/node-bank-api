@@ -2,7 +2,6 @@ import express from 'express';
 import { promises as fs } from 'fs';
 import winston from 'winston';
 import cors from 'cors';
-import accountsRouter from './routes/account.routes.js'
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDoc } from '../doc.js';
 import { graphqlHTTP } from 'express-graphql';
@@ -34,11 +33,9 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-app.use('/accounts', accountsRouter);
 
 app.use('/graphql', graphqlHTTP({
     schema: Schema,
-    // rootValue: root,
     graphiql: true 
 }));
 
