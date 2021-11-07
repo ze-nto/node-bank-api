@@ -94,3 +94,4 @@
 2021-10-24T14:41:10.171Z [my-bank-api] info: POST /accounts - {"id":10,"name":"Alessandras","balance":5000}
 2021-10-24T16:20:36.656Z [my-bank-api] info: GET /accounts
 2021-10-24T16:22:10.885Z [my-bank-api] info: GET /accounts
+2021-11-06T23:02:15.925Z [my-bank-api] info: GET /accounts
