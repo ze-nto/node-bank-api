@@ -23,12 +23,11 @@ async function createAccount(req, res, next) {
 
 
 async function getAccounts(req, res, next){
-
         try{
-            let data = await AccountService.getAccounts()
+            let data = await AccountService.getAccounts();
             res.send(data);
     
-            logger.info(`GET /accounts`)
+            logger.info(`GET /accounts - user: ${req.auth.user}` )
     
         } catch( err ){
             next(err);
