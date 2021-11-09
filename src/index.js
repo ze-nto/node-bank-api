@@ -33,7 +33,6 @@ app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 app.use('/accounts', accountsRouter);
 
-console.log('Just testing')
 
 app.listen(3000, async () => {
 
