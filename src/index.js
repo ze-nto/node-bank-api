@@ -3,8 +3,11 @@ import { promises as fs } from 'fs';
 import winston from 'winston';
 import cors from 'cors';
 import accountsRouter from './routes/account.routes.js'
+import usersRouter from './routes/user.routes.js'
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDoc } from '../doc.js';
+import jwt from 'jsonwebtoken';
+import userService from './services/user.service.js';
 
 
 const { readFile, writeFile } = fs;
@@ -30,6 +33,7 @@ global.logger = winston.createLogger({
 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
@@ -39,23 +43,33 @@ function authorize(...allowed){
 
     return (req, res, next) => {
 
-        if(req.auth.user){
-           
-            //Nova Implemntação
+        const authHeader = req.headers['authorization']
 
-            if(isAllowed(role)){
+        if(!authHeader || !authHeader.startsWith('Bearer ')){
+            res.status(401).json({ message: 'Denied Access' })
+            return;
+        }
+
+        const jwtToken = authHeader.substring(7, authHeader.length);
+        jwt.verify(jwtToken, userService.secretKey, function(err, decoded){
+            
+            if(err){
+                res.status(401).json({ message: 'Invalid Token'})
+                return;
+            }
+            
+            if(isAllowed(decoded.role)){
                 next();
             } else{
-                res.status(401).send('Role not allowed');
+                res.status(403).send('Role not allowed');
             }
-        }else{
-            res.status(403).send('User not found');
-        }
+
+        });
     }
 }
 
-
-app.use('/accounts', authorize('admin', 'role1'), accountsRouter);
+app.use('/user', usersRouter)
+app.use('/accounts', authorize('admin'), accountsRouter);
 
 
 app.listen(3000, async () => {
