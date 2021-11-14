@@ -5,6 +5,8 @@ import cors from 'cors';
 import accountsRouter from './routes/account.routes.js'
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDoc } from '../doc.js';
+import basicAuth from 'express-basic-auth';
+
 
 const { readFile, writeFile } = fs;
 const app = express();
@@ -31,9 +33,48 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(cors());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-app.use('/accounts', accountsRouter);
 
-console.log('Just testing')
+function getRole(username){
+    if(username === 'admin'){
+        return 'admin'
+    } else if(username === 'jose'){
+        return 'role1'
+    }
+}
+
+function authorize(...allowed){
+    const isAllowed = role => allowed.indexOf(role) > -1;
+
+    return (req, res, next) => {
+
+        if(req.auth.user){
+            const role = getRole(req.auth.user);
+
+            if(isAllowed(role)){
+                next();
+            } else{
+                res.status(401).send('Role not allowed');
+            }
+        }else{
+            res.status(403).send('User not found');
+        }
+    }
+}
+
+app.use(basicAuth({
+    authorizer: (username, password) => {
+        const userMatches = basicAuth.safeCompare(username, 'admin');
+        const passMatches = basicAuth.safeCompare(password, 'admin');
+        
+        const userMatches2 = basicAuth.safeCompare(username, 'jose');
+        const passMatches2 = basicAuth.safeCompare(password, '123');
+        
+        return userMatches && passMatches || userMatches2 && passMatches2 ;
+    }
+}))
+
+app.use('/accounts', authorize('admin', 'role1'), accountsRouter);
+
 
 app.listen(3000, async () => {
 
