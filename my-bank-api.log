@@ -102,3 +102,39 @@
 2021-11-09T00:59:53.503Z [my-bank-api] info: GET /accounts - user: admin
 2021-11-09T01:10:25.064Z [my-bank-api] info: GET /accounts - user: admin
 2021-11-09T01:10:36.374Z [my-bank-api] info: GET /accounts - user: jose
+2021-11-14T14:46:57.604Z [my-bank-api] info: GET /getUsers
+2021-11-14T14:49:00.619Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:51:02.667Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:52:25.245Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:53:14.557Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:53:39.978Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:54:52.480Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:55:43.221Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:56:13.140Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:57:13.670Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:57:33.794Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:58:57.522Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T14:58:58.574Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:00:42.140Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:03:09.908Z [my-bank-api] info: POST /createUser - {"username":"Joseps","password":"1252625","role":"admin"}
+2021-11-14T15:03:18.408Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:03:44.745Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:04:21.302Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:05:21.330Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:05:29.739Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:06:09.214Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:06:14.037Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:06:23.810Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:07:37.486Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:08:10.004Z [my-bank-api] info: GET /getUsers
+2021-11-14T15:10:01.590Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:10:02.607Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:10:03.125Z [my-bank-api] error: /user - Username, Password e Role são obrigatórios
+2021-11-14T15:11:03.146Z [my-bank-api] info: POST /createUser - {"username":"Joseps","password":"1252625","role":"admin"}
+2021-11-14T15:11:21.421Z [my-bank-api] info: GET /getUsers
+2021-11-14T15:11:53.734Z [my-bank-api] error: /user - token is not defined
+2021-11-14T15:12:15.529Z [my-bank-api] error: /user - Usuário não encontrado.
+2021-11-14T15:12:30.529Z [my-bank-api] info: POST /createUser - {"username":"Joseps","password":"1252625","role":"admin"}
+2021-11-14T15:12:38.383Z [my-bank-api] info: POST /login - {"username":"Joseps","password":"1252625","role":"admin"}
+2021-11-14T15:13:31.381Z [my-bank-api] error: POST /accounts - Name e Balance são obrigatórios
+2021-11-14T15:13:38.714Z [my-bank-api] error: GET /accounts - Cannot read property 'user' of undefined
